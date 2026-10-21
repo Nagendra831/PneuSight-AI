@@ -66,11 +66,6 @@ st.markdown("""
 # ---------------------------------------------------------
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 WEIGHTS_PATH = "efficientnet_b0_rsna.pth"
-WEIGHTS_URL = "https://your-public-download-link-here.pth"  # Optional direct URL
-
-if not os.path.exists(WEIGHTS_PATH) and WEIGHTS_URL:
-    import urllib.request
-    urllib.request.urlretrieve(WEIGHTS_URL, WEIGHTS_PATH)
 
 eval_transform = transforms.Compose([
     transforms.Resize((224, 224)),
