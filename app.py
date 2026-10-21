@@ -65,7 +65,7 @@ st.markdown("""
 # Model Loaders (EfficientNet + TorchXRayVision)
 # ---------------------------------------------------------
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-WEIGHTS_PATH = "/content/drive/MyDrive/PneuSight_Hackathon/efficientnet_b0_rsna.pth"
+WEIGHTS_PATH = "efficientnet_b0_rsna.pth"
 
 eval_transform = transforms.Compose([
     transforms.Resize((224, 224)),
