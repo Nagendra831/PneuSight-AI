@@ -94,7 +94,7 @@ def load_classifier():
         except Exception as e:
             st.sidebar.error(f"❌ Error loading weights dict: {e}")
     else:
-        st.sidebar.warning("⚠️ Saved .pth weights file not found in Google Drive.")
+        st.sidebar.warning("⚠️ Saved .pth weights file not found locally.")
 
     model.to(DEVICE)
     model.eval()
